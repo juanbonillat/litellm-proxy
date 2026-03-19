@@ -35,11 +35,8 @@ variable "litellm_master_key_secret_arn" {
 
 # -----------------------------------------------------------------------------
 # Data Sources - Retrieve secrets from AWS Secrets Manager
-# -----------------------------------------------------------------------------
-
-data "aws_secretsmanager_secret_version" "litellm_master_key" {
-  secret_id = var.litellm_master_key_secret_arn
-}
+# Note: Master key is retrieved by Lambda at runtime from Secrets Manager
+# No need to fetch it here in Terraform
 
 # Note: Key is no longer stored in locals - retrieved by Lambda at runtime instead
 
