@@ -1,0 +1,98 @@
+# Terraform State Files (SENSITIVE - never commit)
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+*.tfstate.*.backup
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform/
+.terraform.lock.hcl
+
+# Terraform Variables with Secrets (SENSITIVE - never commit)
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+
+# Lambda Code and Build Artifacts (unnecessary to commit)
+lambda_function.zip
+lambda_build/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Environment and Secrets Files
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+.aws/
+
+# Logs
+*.log
+logs/
+*.out
+
+# OS Generated Files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary Files
+*.tmp
+*.bak
+temp/
+tmp/
+*.swp
+.vscode/settings.json
+
+# Keep These Important Files
+!ARCHITECTURE.md
+!README.md
+!SECURITY_MODEL.md
+!OKTA_SETUP.md
+!terraform.tf
+!variables.tf
+!outputs.tf
+!build_lambda.sh
+!index.py
+!.gitignore
